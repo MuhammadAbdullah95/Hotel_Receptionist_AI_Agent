@@ -1,0 +1,11 @@
+README.md
+setup.py
+QAsystem/__init__.py
+QAsystem/data_ingetion.py
+QAsystem/retrievelgeneration.py
+QAsystem/utils.py
+QAsystem_with_haystack.egg-info/PKG-INFO
+QAsystem_with_haystack.egg-info/SOURCES.txt
+QAsystem_with_haystack.egg-info/dependency_links.txt
+QAsystem_with_haystack.egg-info/requires.txt
+QAsystem_with_haystack.egg-info/top_level.txt

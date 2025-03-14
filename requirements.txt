@@ -1,0 +1,11 @@
+pinecone-haystack
+haystack-ai
+fastapi[standard]
+uvicorn
+python-dotenv
+pathlib
+pypdf
+nltk>=3.9.1
+sentence-transformers>=3.0.0
+google-ai-haystack
+-e .
