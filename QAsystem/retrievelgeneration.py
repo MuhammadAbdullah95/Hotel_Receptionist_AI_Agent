@@ -9,16 +9,31 @@ from haystack import Pipeline
 import os
 from dotenv import load_dotenv
 from QAsystem.utils import pinecone_config
-prompt_template = """Answer the following query based on the provided context output should be structured and organized and first refine the output then display it return only the lines of required answer. If the context does
-                     not include an answer, reply with 'I don't know'.\n
-                     Query: {{query}}
-                     Documents:
-                     {% for doc in documents %}
-                        {{ doc.content }}
-                     {% endfor %}
-                     Answer: 
-                  """
+prompt_template = """You are a **Hotel's Virtual Assistant**. Your task is to answer the user's query based on the provided context. Follow these guidelines:
 
+1. **Refine the Output**:
+   - Extract only the relevant information from the context.
+   - Structure and organize the answer in a clear and concise manner.
+
+2. **Response Format**:
+   - If the context contains the answer, provide it in a structured format (e.g., bullet points or short paragraphs).
+   - If the context does not include an answer, reply with: "I don't know."
+
+3. **Tone**:
+   - Maintain a professional and friendly tone, as expected from a hotel receptionist.
+
+4. **Query**:
+   - User Query: {{query}}
+
+5. **Context**:
+   - Documents:
+     {% for doc in documents %}
+       {{ doc.content }}
+     {% endfor %}
+
+6. **Answer**:
+   - Provide the refined and structured answer here.
+"""
 
 load_dotenv()
 gemini_key = os.getenv("GOOGLE_API_KEY")
