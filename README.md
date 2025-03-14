@@ -24,6 +24,7 @@ The **Hotel Receptionist Chatbot** uses **Retrieval-Augmented Generation (RAG)**
 ### Key Components:
 - **Hugging Face Embeddings Model**: Generates embeddings from a predefined dataset (`FAQs.txt`) to retrieve relevant information.
 - **Gemini Model**: Refines and generates human-like, contextually accurate responses.
+- **Pinecone**: Pinecone vector database to store and retrieve embeddings.
 
 This chatbot is designed to be both **intelligent** and **visually appealing**, reflecting the ambiance of a luxurious hotel environment.
 
@@ -54,10 +55,13 @@ The system is structured as follows:
 | Technology      | Description                                     |
 |-----------------|-------------------------------------------------|
 | **Haystack**    | NLP framework for document retrieval & QA.      |
+| **Gemini Model** | For interating with the user in Conversational way. |
+| **Pinecone** | A vector Database for as a RAG Storage          |
 | **FastAPI**     | High-performance Python backend framework.     |
 | **HTML/CSS/JS** | Frontend structure and interactivity.           |
 | **Bootstrap**   | Responsive, modern UI components.               |
 | **SweetAlert2** | Beautiful and responsive alert modals.          |
+
 
 ---
 
@@ -130,6 +134,63 @@ python -m http.server
 - AI-generated responses appear instantly in a conversational format.
 
 ---
+
+
+## 🔑 API Keys Setup
+
+Before running the project, make sure you have the following API keys:
+
+1. **Google API Key** - for accessing Google services (e.g., search, knowledge retrieval).
+2. **Pinecone API Key** - for vector database operations (e.g., storing and retrieving embeddings).
+3. **Hugging Face Token (HF_TOKEN)** - for accessing hosted LLM models and pipelines.
+
+### ⚙️ How to Set API Keys
+
+You can set these API keys as **environment variables** to keep them secure and avoid hardcoding them into your code.
+
+#### 🖥️ Option 1: Temporary (per session)
+
+```bash
+export GOOGLE_API_KEY='your_google_api_key_here'
+export PINECONE_API_KEY='your_pinecone_api_key_here'
+export HF_TOKEN='your_huggingface_token_here'
+```
+
+#### 📁 Option 2: Permanent (via `.env` file)
+
+1. Create a `.env` file in the root directory of your project:
+    ```bash
+    touch .env
+    ```
+
+2. Add your keys inside the `.env` file:
+    ```ini
+    GOOGLE_API_KEY=your_google_api_key_here
+    PINECONE_API_KEY=your_pinecone_api_key_here
+    HF_TOKEN=your_huggingface_token_here
+    ```
+
+3. Make sure to load this `.env` file in your Python app (if using something like `python-dotenv`):
+    ```python
+    from dotenv import load_dotenv
+    load_dotenv()
+    ```
+
+4. ⚠️ **Important**: Add `.env` to your `.gitignore` to avoid exposing keys:
+    ```
+    # .gitignore
+    .env
+    ```
+
+### 🚨 Notes:
+- Never share or commit your API keys publicly.
+- Regenerate API keys if you suspect they are compromised.
+
+Feel free to contribute or suggest improvements! ✨
+
+
+
+
 
 ## 🤝 Contributing
 
