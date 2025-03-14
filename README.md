@@ -157,6 +157,4 @@ SweetAlert2: For the beautiful alert messages.
 
 Enjoy using the Hotel Receptionist Chatbot! If you have any questions or feedback, feel free to open an issue or contact the maintainers.
 
-Copy
-
 ---
