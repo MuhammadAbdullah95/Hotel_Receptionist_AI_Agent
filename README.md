@@ -1,185 +1,166 @@
-# Hotel Receptionist Chatbot
+# 🏨 Hotel Receptionist Chatbot
 
-Welcome to the **Hotel Receptionist Chatbot** project! This is a conversational AI chatbot designed to act as a virtual hotel receptionist, answering frequently asked questions (FAQs) from guests. Built using **Haystack** for natural language processing (NLP) and **FastAPI** for the backend, this chatbot provides a seamless and interactive experience for users.
-
----
-
-## Table of Contents
-1. [Project Overview](#project-overview)
-2. [Technical Architecture](#technical-architecture)
-3. [Tech Stack](#tech-stack)
-4. [Features](#features)
-5. [Setup and Installation](#setup-and-installation)
-6. [Usage](#usage)
-7. [API Endpoints](#api-endpoints)
-8. [Contributing](#contributing)
----
-
-## Project Overview
-
-The **Hotel Receptionist Chatbot** is an advanced AI-powered chatbot designed to act as a virtual hotel receptionist. It uses **Retrieval-Augmented Generation (RAG)** to provide accurate and context-aware responses to user queries. The chatbot leverages two state-of-the-art language models:
-1. **Hugging Face Embeddings Model**: For creating embeddings from a predefined dataset (`FAQs.txt`) and retrieving relevant information.
-2. **Gemini Model**: For refining the retrieved answers and generating human-like, context-aware responses.
-
-Built with **Haystack** for natural language processing (NLP) and **FastAPI** for the backend, this chatbot offers a seamless and interactive experience for hotel guests.
-
-### Key Features:
-- **AI-Powered Responses**: Combines retrieval and generation for accurate and context-aware answers.
-- **Dynamic Refinement**: Uses Gemini to refine retrieved answers, ensuring high-quality responses.
-- **Interactive Chat Interface**: A user-friendly interface for seamless interaction.
-- **Luxurious Design**: A visually appealing design inspired by the ambiance of a hotel lobby.
+Welcome to the **Hotel Receptionist Chatbot** project — an AI-powered virtual receptionist designed to handle frequently asked questions (FAQs) from hotel guests. Built with **Haystack** for natural language processing (NLP) and **FastAPI** for backend services, this chatbot offers a seamless and interactive experience for users, mimicking a real hotel concierge.
 
 ---
 
-## Technical Architecture
+## 📁 Table of Contents
 
-The chatbot is built using the following components:
-1. **Frontend**:
-   - A responsive and interactive chat interface built with **HTML**, **CSS**, and **JavaScript**.
-   - Uses **Bootstrap** for styling and **SweetAlert2** for user-friendly alerts.
-
-2. **Backend**:
-   - Built with **FastAPI**, a modern and fast web framework for building APIs.
-   - Handles user queries, retrieves relevant information, and generates refined responses.
-
-3. **AI Models**:
-   - **Hugging Face Embeddings Model**: Creates embeddings from the `FAQs.txt` file and retrieves relevant information.
-   - **Gemini Model**: Refines the retrieved answers to generate context-aware and human-like responses.
-
-4. **RAG Implementation**:
-   - Combines retrieval (from embeddings) and generation (using Gemini) to provide accurate and dynamic answers.
+1. [Project Overview](#project-overview)  
+2. [Technical Architecture](#technical-architecture)  
+3. [Tech Stack](#tech-stack)  
+4. [Features](#features)  
+5. [Setup and Installation](#setup-and-installation)  
+6. [Usage](#usage)  
+7. [Contributing](#contributing)  
+8. [Acknowledgments](#acknowledgments)  
 
 ---
 
-## Tech Stack
+## 🚀 Project Overview
 
-The project is built using the following technologies:
+The **Hotel Receptionist Chatbot** uses **Retrieval-Augmented Generation (RAG)** to provide accurate, context-aware answers to user queries. It combines **retrieval** and **generation** techniques for optimal responses.
 
-- **Haystack**: A framework for building powerful NLP pipelines. It is used for question-answering and document retrieval.
-- **FastAPI**: A modern, fast (high-performance) web framework for building APIs with Python 3.7+.
-- **HTML/CSS/JavaScript**: For the frontend design and interactivity.
-- **Bootstrap**: For responsive and modern UI components.
-- **SweetAlert2**: For beautiful and user-friendly alert messages.
+### Key Components:
+- **Hugging Face Embeddings Model**: Generates embeddings from a predefined dataset (`FAQs.txt`) to retrieve relevant information.
+- **Gemini Model**: Refines and generates human-like, contextually accurate responses.
 
----
-
-## Features
-
-1. **Interactive Chat Interface**:
-   - Users can type their queries in the chatbox and receive instant responses.
-   - Messages are displayed in a conversational format, with user messages on the right and bot messages on the left.
-
-2. **Luxurious Design**:
-   - The chatbot interface is designed to resemble a hotel lobby, with warm colors and elegant fonts.
-
-3. **Dynamic Responses**:
-   - The chatbot uses Haystack's NLP capabilities to provide accurate and context-aware answers.
-
-4. **Error Handling**:
-   - Friendly error messages are displayed if the chatbot cannot generate a response.
+This chatbot is designed to be both **intelligent** and **visually appealing**, reflecting the ambiance of a luxurious hotel environment.
 
 ---
 
-## Setup and Installation
+## 🛠 Technical Architecture
 
-Follow these steps to set up the project locally:
+The system is structured as follows:
 
-### Prerequisites
-- Python 3.7 or higher
-- pip (Python package manager)
+### 1. **Frontend**:
+- Responsive and elegant chat interface using **HTML**, **CSS**, and **JavaScript**.
+- **Bootstrap** for responsive UI components.
+- **SweetAlert2** for attractive and user-friendly alert messages.
 
-### Steps
+### 2. **Backend**:
+- Built on **FastAPI** for high-performance API management.
+- Handles chat queries, invokes NLP pipeline, and returns refined answers.
+
+### 3. **AI Pipeline**:
+- **Hugging Face Embeddings Model**: Retrieves relevant data from FAQs.
+- **Gemini Model**: Generates natural and polished responses.
+- **Haystack RAG pipeline** to integrate retrieval and generation seamlessly.
+
+---
+
+## ⚙️ Tech Stack
+
+| Technology      | Description                                     |
+|-----------------|-------------------------------------------------|
+| **Haystack**    | NLP framework for document retrieval & QA.      |
+| **FastAPI**     | High-performance Python backend framework.     |
+| **HTML/CSS/JS** | Frontend structure and interactivity.           |
+| **Bootstrap**   | Responsive, modern UI components.               |
+| **SweetAlert2** | Beautiful and responsive alert modals.          |
+
+---
+
+## ✨ Features
+
+- **Interactive Chat Interface**: Real-time conversations with a chatbot.
+- **AI-Powered, Context-Aware Responses**: High-quality, intelligent replies using RAG.
+- **Luxurious Design**: Chat interface mimicking hotel lobby ambiance.
+- **Error Handling**: Graceful error messages for unrecognized queries.
+- **Fully Responsive**: Works seamlessly across devices.
+
+---
+
+## ⚙️ Setup and Installation
+
+### ✅ Prerequisites
+- **Python 3.7+**
+- **pip** (Python package manager)
+
+---
+
+### 📥 Installation Steps
 
 1. **Clone the Repository**:
-   ```bash
-   git clone https://github.com/MuhammadAbdullah95/Hotel_Receptionist_AI_Agent.git
-   cd Hotel_Receptionist_AI_Agent
+```bash
+git clone https://github.com/MuhammadAbdullah95/Hotel_Receptionist_AI_Agent.git
+cd Hotel_Receptionist_AI_Agent
+```
 
-Set Up a Virtual Environment:
-
-bash
-Copy
+2. **Set Up a Virtual Environment**:
+```bash
 python -m venv venv
 source venv/bin/activate  # On Windows: venv\Scripts\activate
-Install Dependencies:
+```
 
-bash
-Copy
+3. **Install Dependencies**:
+```bash
 pip install -r requirements.txt
-Run the FastAPI Server:
+```
 
-bash
-Copy
+4. **Run the FastAPI Server**:
+```bash
 uvicorn app:app --reload
-Open the Chatbot Interface:
+```
 
-Navigate to index.html in the templates folder or serve it using a local server (e.g., python -m http.server).
-
-Open your browser and go to http://localhost:8000.
-
-Usage
-Open the Chatbot:
-
-Launch the chatbot interface in your browser.
-
-Ask Questions:
-
-Type your query in the input box and press Send or hit Enter.
-
-Example queries:
-
-"What time is check-in?"
-
-"Do you have room service?"
-
-"Is breakfast included?"
-
-View Responses:
-
-The chatbot will display its response in the chat window.
-
-API Endpoints
-The backend exposes the following API endpoint:
-
-POST /get_answer:
-
-Description: Accepts a user query and returns a response generated by the chatbot.
-
-Request Body:
-
-json
-Copy
-{
-  "question": "What time is check-in?"
-}
-Response:
-
-json
-Copy
-{
-  "answer": "Check-in time is at 3:00 PM."
-}
-Contributing
-Contributions are welcome! If you'd like to contribute to this project, please follow these steps:
-
-Fork the repository.
-
-Create a new branch for your feature or bugfix.
-
-Commit your changes.
-
-Push your branch and open a pull request.
-
-
-Acknowledgments
-Haystack: For providing the NLP framework.
-
-FastAPI: For the backend API.
-
-Bootstrap: For the responsive UI components.
-
-SweetAlert2: For the beautiful alert messages.
-
-Enjoy using the Hotel Receptionist Chatbot! If you have any questions or feedback, feel free to open an issue or contact the maintainers.
+5. **Open the Chatbot Interface**:
+- Open `index.html` located in the `templates` folder using any browser.
+- Or serve via local server:
+```bash
+python -m http.server
+```
+- Visit `http://localhost:8000` in your browser.
 
 ---
+
+## 💬 Usage
+
+### 1. **Open the Chatbot Interface**:
+- Launch `index.html` or navigate to the hosted URL.
+
+### 2. **Start Chatting**:
+- Type your question in the chatbox and hit **Send** or press **Enter**.
+
+### 3. **Sample Queries**:
+- "What time is check-in?"
+- "Do you offer room service?"
+- "Is breakfast included in the stay?"
+
+### 4. **View Responses**:
+- AI-generated responses appear instantly in a conversational format.
+
+---
+
+## 🤝 Contributing
+
+We welcome contributions! Follow these steps to contribute:
+
+1. **Fork** the repository.
+2. **Create a branch** for your feature or bugfix:
+```bash
+git checkout -b feature-name
+```
+3. **Commit** your changes:
+```bash
+git commit -m "Add feature"
+```
+4. **Push** your branch:
+```bash
+git push origin feature-name
+```
+5. **Open a Pull Request** for review.
+
+---
+
+## 🙏 Acknowledgments
+
+- **Haystack**: NLP framework for retrieval and generation.
+- **FastAPI**: Backend API framework.
+- **Bootstrap**: Beautiful and responsive UI toolkit.
+- **SweetAlert2**: For stunning alert dialogs.
+
+---
+
+
+**Enjoy a seamless hotel experience with our AI Receptionist!** 🌐✨
+
