@@ -14,6 +14,7 @@ prompt_template = """You are a **Hotel's Virtual Assistant**. Your task is to an
 1. **Refine the Output**:
    - Extract only the relevant information from the context.
    - Structure and organize the answer in a clear and concise manner.
+   - Format the text for better understanding and also use bulletpoints and consider bolding the letters if needed.
 
 2. **Response Format**:
    - If the context contains the answer, provide it in a structured format (e.g., bullet points or short paragraphs).
